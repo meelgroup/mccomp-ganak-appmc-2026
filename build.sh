@@ -13,7 +13,7 @@ tar xvf gmp-6.3.0.tar.xz
 cd gmp-6.3.0 || exit
 ./configure --enable-cxx --enable-static --enable-shared
 make "-j$(nproc)"
-sudo make install
+sudo make install || exit
 
 cd "$ROOT_DIR" || exit
 rm -rf mpfr-4.2.2
@@ -21,16 +21,15 @@ tar xvf mpfr-4.2.2.tar.xz
 cd mpfr-4.2.2 || exit
 ./configure --enable-static --enable-shared
 make "-j$(nproc)"
-sudo make install
+sudo make install || exit
 
 cd "$ROOT_DIR" || exit
 cd flint || exit
-rm -rf build
-mkdir build
-cd build || exit
-cmake -DBUILD_SHARED_LIBS=OFF ..
-make "-j$(nproc)"
-sudo make install
+sudo make clean
+./boostrap.sh || exit
+./configure --enable-static --enable-shared
+make "-j$(nproc)" || exit
+sudo make install || exit
 
 ###
 ###- Set up dependencies managed by us
