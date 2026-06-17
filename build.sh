@@ -13,7 +13,7 @@ tar xzvf gmp-6.3.0.tar.xz
 cd gmp-6.3.0 || exit
 ./configure --enable-cxx --enable-static --enable-shared
 make "-j$(nproc)"
-make install
+sudo make install
 
 cd "$ROOT_DIR" || exit
 rm -rf mpfr-4.2.2
@@ -21,7 +21,7 @@ tar xzvf mpfr-4.2.2.tar.xz
 cd mpfr-4.2.2 || exit
 ./configure --enable-static --enable-shared
 make "-j$(nproc)"
-make install
+sudo make install
 
 cd "$ROOT_DIR" || exit
 cd flint || exit
@@ -30,7 +30,7 @@ mkdir build
 cd build || exit
 cmake -DBUILD_SHARED_LIBS=OFF ..
 make "-j$(nproc)"
-make install
+sudo make install
 
 ###
 ###- Set up dependencies managed by us
