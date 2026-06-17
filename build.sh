@@ -9,7 +9,7 @@ rm -rf ganak_static
 
 cd "$ROOT_DIR" || exit
 rm -rf gmp-6.3.0
-tar xzvf gmp-6.3.0.tar.xz
+tar xvf gmp-6.3.0.tar.xz
 cd gmp-6.3.0 || exit
 ./configure --enable-cxx --enable-static --enable-shared
 make "-j$(nproc)"
@@ -17,7 +17,7 @@ sudo make install
 
 cd "$ROOT_DIR" || exit
 rm -rf mpfr-4.2.2
-tar xzvf mpfr-4.2.2.tar.xz
+tar xvf mpfr-4.2.2.tar.xz
 cd mpfr-4.2.2 || exit
 ./configure --enable-static --enable-shared
 make "-j$(nproc)"
@@ -111,6 +111,7 @@ cd "$ROOT_DIR/approxmc/build" || exit 1
 cd "$ROOT_DIR/ganak/build" || exit 1
 ./build_static_release.sh
 
-cp build/ganak ganak_static
+cd "$ROOT_DIR" || exit 1
+cp ganak/build/ganak ganak_static
 ldd ganak_static
 strip ganak_static
