@@ -1,0 +1,3 @@
+[submodule "ganak"]
+	path = ganak
+	url = https://github.com/meelgroup/ganak/
