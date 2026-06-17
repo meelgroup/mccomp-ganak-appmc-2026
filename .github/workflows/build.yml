@@ -1,0 +1,62 @@
+name: Build ganak
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build ganak_static on Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential cmake m4 xz-utils zlib1g-dev ccache
+
+      - name: Set up ccache
+        uses: actions/cache@v4
+        with:
+          path: ~/.ccache
+          key: ccache-${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            ccache-${{ runner.os }}-
+
+      - name: Configure ccache
+        run: |
+          echo "/usr/lib/ccache" >> "$GITHUB_PATH"
+          echo "CCACHE_DIR=$HOME/.ccache" >> "$GITHUB_ENV"
+          ccache --max-size=2G
+
+      - name: Run build.sh
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Show ccache stats
+        run: ccache --show-stats
+
+      - name: Check ganak_static is built and executable
+        run: |
+          test -f ganak_static || { echo "::error::ganak_static was not built"; exit 1; }
+          test -x ganak_static || { echo "::error::ganak_static is not executable"; exit 1; }
+          echo "ganak_static is present and executable:"
+          ls -l ganak_static
+          file ganak_static
+
+      - name: Run ganak_static --help
+        run: ./ganak_static --help
+
+      - name: Upload ganak_static artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ganak_static
+          path: ganak_static
