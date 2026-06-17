@@ -13,4 +13,8 @@
 [submodule "approxmc"]
    path = approxmc
    url = https://github.com/meelgroup/approxmc
+   rev = 67c5648a0fddc9cae440772572ac4ae62b3aad65
+[submodule "cryptominisat"]
+   path = cryptominisat
+   url = https://github.com/msoos/cryptominisat
    rev = 5e1ee18e8a77d9d25d352b959d57e7e416c03fc2
