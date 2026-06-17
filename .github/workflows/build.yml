@@ -20,28 +20,28 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            build-essential cmake m4 xz-utils zlib1g-dev
+            build-essential cmake m4 xz-utils zlib1g-dev ccache
 
-      # - name: Set up ccache
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ~/.ccache
-      #     key: ccache-${{ runner.os }}-${{ github.sha }}
-      #     restore-keys: |
-      #       ccache-${{ runner.os }}-
+      - name: Set up ccache
+        uses: actions/cache@v4
+        with:
+          path: ~/.ccache
+          key: ccache-${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            ccache-${{ runner.os }}-
 
-      # - name: Configure ccache
-      #   run: |
-      #     echo "/usr/lib/ccache" >> "$GITHUB_PATH"
-      #     echo "CCACHE_DIR=$HOME/.ccache" >> "$GITHUB_ENV"
-      #     ccache --max-size=2G
+      - name: Configure ccache
+        run: |
+          echo "/usr/lib/ccache" >> "$GITHUB_PATH"
+          echo "CCACHE_DIR=$HOME/.ccache" >> "$GITHUB_ENV"
+          ccache --max-size=2G
 
       - name: Run build.sh
         run: |
           ./build.sh
 
-      # - name: Show ccache stats
-      #   run: ccache --show-stats
+      - name: Show ccache stats
+        run: ccache --show-stats
 
       - name: Check ganak_static is built and executable
         run: |

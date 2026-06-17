@@ -11,7 +11,7 @@ cd "$ROOT_DIR" || exit
 rm -rf gmp-6.3.0
 tar xvf gmp-6.3.0.tar.xz
 cd gmp-6.3.0 || exit
-./configure --enable-cxx --enable-static --enable-shared
+./configure --enable-cxx --enable-static --enable-shared CC="gcc -std=gnu17"
 make "-j$(nproc)"
 sudo make install || exit
 
