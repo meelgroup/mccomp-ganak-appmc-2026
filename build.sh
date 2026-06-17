@@ -26,8 +26,7 @@ sudo make install || exit
 cd "$ROOT_DIR" || exit
 cd flint || exit
 sudo make clean
-chmod +x boostrap.sh
-./boostrap.sh || exit
+./bootstrap.sh || exit
 ./configure --enable-static --enable-shared
 make "-j$(nproc)" || exit
 sudo make install || exit
