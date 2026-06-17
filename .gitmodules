@@ -1,3 +1,8 @@
 [submodule "ganak"]
-	path = ganak
-	url = https://github.com/meelgroup/ganak/
+    path = ganak
+    url = https://github.com/meelgroup/ganak/
+    rev = 0b4881b40126fb5ae8a1b7c9fdd4878afa25b051
+[submodule "arjun"]
+    path = arjun
+    url = https://github.com/meelgroup/arjun/
+    rev = 11e203eab3cc5d52c41a992ea579f2fb7bc081d9
