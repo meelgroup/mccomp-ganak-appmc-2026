@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build ganak_static on Ubuntu
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
 
     steps:
       - name: Checkout (with submodules)
