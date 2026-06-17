@@ -6,7 +6,7 @@ Should build with `./build.sh`. It simply unpacks and builds gmp, mpfr, and flin
 sets up all the build shell scripts for our self-managed tools, and then builds them all.
 This results in a statically linked binary `ganak_static`.
 
-# Run scripts
+## Run scripts
 
 *  `mccomp_run_approx.sh` -- runs with approximate model counting for
    unweighted, and runs with high precision floating point for weighted counting
