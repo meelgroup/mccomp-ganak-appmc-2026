@@ -7,13 +7,13 @@ fi
 
 if grep -qE '^c t (mc|pmc)' "$file"; then
     echo "c o The file seems to be unweighted. Will run with --mode 0."
-    ./ganak --mode 0 --maxcache=19000 "$file"
+    ./ganak_static --mode 0 --maxcache=19000 "$file"
 elif grep -qE '^c t (wmc|pwmc)' "$file"; then
     echo "c o The file seems to be weighted. Will run with --mode 1."
-    ./ganak --mode 1 --maxcache=14000 "$file"
+    ./ganak_static --mode 1 --maxcache=14000 "$file"
 elif grep -qE '^c t (amc-complex)' "$file"; then
     echo "c o The file seems to be complex number-weighted. Will run with --mode 2."
-    ./ganak --mode 2 --maxcache=9000 "$file"
+    ./ganak_static --mode 2 --maxcache=9000 "$file"
 else
   echo "c o The file does not contain a valid mccomp header."
   exit 1
