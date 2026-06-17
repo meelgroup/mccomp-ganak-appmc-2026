@@ -23,6 +23,15 @@ cd mpfr-4.2.2 || exit
 make "-j$(nproc)"
 make install
 
+cd "$ROOT_DIR" || exit
+cd flint || exit
+rm -rf build
+mkdir build
+cd build || exit
+cmake -DBUILD_SHARED_LIBS=OFF ..
+make "-j$(nproc)"
+make install
+
 ###
 ###- Set up dependencies managed by us
 
