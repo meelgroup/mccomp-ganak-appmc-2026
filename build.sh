@@ -62,6 +62,7 @@ rm -rf build
 mkdir build
 cd build || exit
 ln -s ../*build*.sh .
+
 cd "$ROOT_DIR" || exit
 cd sbva || exit
 rm -rf build
