@@ -6,3 +6,11 @@
     path = arjun
     url = https://github.com/meelgroup/arjun/
     rev = 11e203eab3cc5d52c41a992ea579f2fb7bc081d9
+[submodule "sbva"]
+   path = sbva
+   url = https://github.com/meelgroup/sbva/
+   rev = f1021c17dddee4fcd5d552969f459482907f9f84
+[submodule "approxmc"]
+   path = approxmc
+   url = https://github.com/meelgroup/approxmc
+   rev = 5e1ee18e8a77d9d25d352b959d57e7e416c03fc2
