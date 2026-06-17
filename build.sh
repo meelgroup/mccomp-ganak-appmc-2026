@@ -54,42 +54,42 @@ cd cryptominisat || exit
 rm -rf build
 mkdir build
 cd build || exit
-ln -s ../*build*.sh .
+ln -s ../scripts/build_scripts/build*.sh .
 
 cd "$ROOT_DIR" || exit
 cd treedecomp || exit
 rm -rf build
 mkdir build
 cd build || exit
-ln -s ../*build*.sh .
+ln -s ../scripts/build*.sh .
 
 cd "$ROOT_DIR" || exit
 cd sbva || exit
 rm -rf build
 mkdir build
 cd build || exit
-ln -s ../*build*.sh .
+ln -s ../scripts/build*.sh .
 
 cd "$ROOT_DIR" || exit
 cd arjun || exit
 rm -rf build
 mkdir build
 cd build || exit
-ln -s ../*build*.sh .
+ln -s ../scripts/build*.sh .
 
 cd "$ROOT_DIR" || exit
 cd approxmc || exit
 rm -rf build
 mkdir build
 cd build || exit
-ln -s ../*build*.sh .
+ln -s ../scripts/build*.sh .
 
 cd "$ROOT_DIR" || exit
 cd ganak || exit
 rm -rf build
 mkdir build
 cd build || exit
-ln -s ../*build*.sh .
+ln -s ../scripts/build*.sh .
 
 ###
 ### build ganak
