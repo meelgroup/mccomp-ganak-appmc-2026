@@ -38,7 +38,6 @@ jobs:
 
       - name: Run build.sh
         run: |
-          chmod +x build.sh
           ./build.sh
 
       - name: Show ccache stats
