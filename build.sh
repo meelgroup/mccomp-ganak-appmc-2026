@@ -108,6 +108,7 @@ cd "$ROOT_DIR/arjun/build" || exit 1
 cd "$ROOT_DIR/approxmc/build" || exit 1
 ./build_static_release.sh
 cd "$ROOT_DIR/ganak/build" || exit 1
+sed "s/-DBUILD_SHARED_LIBS=OFF/-DBUILD_SHARED_LIBS=OFF -DENABLE_TESTING=OFF/" ./build_static_release.sh
 ./build_static_release.sh
 
 cd "$ROOT_DIR" || exit 1
