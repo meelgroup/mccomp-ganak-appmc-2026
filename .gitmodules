@@ -7,14 +7,22 @@
     url = https://github.com/meelgroup/arjun/
     rev = 11e203eab3cc5d52c41a992ea579f2fb7bc081d9
 [submodule "sbva"]
-   path = sbva
-   url = https://github.com/meelgroup/sbva/
-   rev = f1021c17dddee4fcd5d552969f459482907f9f84
+    path = sbva
+    url = https://github.com/meelgroup/sbva/
+    rev = f1021c17dddee4fcd5d552969f459482907f9f84
 [submodule "approxmc"]
-   path = approxmc
-   url = https://github.com/meelgroup/approxmc
-   rev = 67c5648a0fddc9cae440772572ac4ae62b3aad65
+    path = approxmc
+    url = https://github.com/meelgroup/approxmc
+    rev = 67c5648a0fddc9cae440772572ac4ae62b3aad65
 [submodule "cryptominisat"]
-   path = cryptominisat
-   url = https://github.com/msoos/cryptominisat
-   rev = 5e1ee18e8a77d9d25d352b959d57e7e416c03fc2
+    path = cryptominisat
+    url = https://github.com/msoos/cryptominisat
+    rev = 5e1ee18e8a77d9d25d352b959d57e7e416c03fc2
+[submodule "cadiback"]
+    path = cadiback
+    url = https://github.com/meelgroup/cadiback
+    rev = 3b6a84062b1304433eb8960a4bff6b9a80de9c54
+[submodule "cadical"]
+    path = cadical
+    url = https://github.com/meelgroup/cadical
+    rev =394c3f72858c2fe8cd35321f74f11f0f61c91123
