@@ -5,7 +5,7 @@ if [ -z "$file" ]; then
     exit 1
 fi
 
-FAST=(--fast --tditers 100 --arjunextendmaxconfl 3000)
+FAST=(--arjuncmsmult 0.1 --arjunoraclemult 0.1 --arjunbackwmaxc 50 --tditers 50 --tdsteps 30000 --arjunextendmaxconfl 3000)
 if grep -qE '^c t (mc|pmc)' "$file"; then
     echo "c o The file seems to be unweighted. Will run with --mode 0."
     ./ganak_static --mode 0 --maxcache=19000 "${FAST[@]}" "$file"
