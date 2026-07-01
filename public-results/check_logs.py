@@ -23,7 +23,6 @@ Three independent passes:
 """
 
 import re
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -99,9 +98,10 @@ def parse_peak_mem_kib(path: Path) -> int | None:
 # --------------------------------------------------------------------------- #
 # Collect one record per run directory.
 # --------------------------------------------------------------------------- #
-def collect_runs():
+def collect_runs(suite):
+    """Collect one record per run for a suite ('exact' or 'approx')."""
     runs = []
-    for track_dir in sorted(ROOT.glob("track*-exact")):
+    for track_dir in sorted(ROOT.glob(f"track*-{suite}")):
         track = track_dir.name
         for run_dir in sorted((track_dir / "logs").glob("*.cnf")):
             var = parse_varfile(run_dir / "varfile.log")
@@ -223,14 +223,23 @@ def pass3_memory(runs):
     print()
 
 
-def main():
-    runs = collect_runs()
+def check_suite(suite):
+    print("#" * 70)
+    print(f"#  SUITE: {suite.upper()}")
+    print("#" * 70)
+    runs = collect_runs(suite)
     if not runs:
-        print("No run directories found under", ROOT, file=sys.stderr)
-        sys.exit(1)
+        print(f"  No track*-{suite} directories found - skipping.\n")
+        return
     pass1_error_scan(runs)
     pass2_early_termination(runs)
     pass3_memory(runs)
+
+
+def main():
+    # Run the exact suite first, then the approx suite.
+    for suite in ("exact", "approx"):
+        check_suite(suite)
 
 
 if __name__ == "__main__":
