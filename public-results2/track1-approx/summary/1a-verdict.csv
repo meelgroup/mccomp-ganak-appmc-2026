@@ -1,0 +1,3 @@
+,verdict,solver,configuration,instance,wall_time
+0,OK,ganak-approx_MCC2026,ganak-approx_MCC2026,75,20248.75
+1,TLE,ganak-approx_MCC2026,ganak-approx_MCC2026,25,90006.34

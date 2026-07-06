@@ -1,0 +1,2 @@
+,rank,solver_conf,job,res_status,corr,log10_from_count_solver,prec
+16,C: Approx,ganak-approx_MCC2026,2026-06-24_22,OK,75,75,"['approx', 'arb', 'int']"
