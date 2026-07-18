@@ -30,7 +30,7 @@ import matplotlib
 matplotlib.use("Agg")            # headless: write files, no interactive window
 import matplotlib.pyplot as plt
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).parent.resolve()
 OUT_DIR = ROOT / "cdf_plots"
 WALL_LIMIT_S = 3600.0
 TRACKS = [1, 2, 3, 4, 5]

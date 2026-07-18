@@ -37,7 +37,7 @@ from pathlib import Path
 sys.set_int_max_str_digits(2_000_000)   # weighted counts reach thousands of digits
 csv.field_size_limit(10**8)
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).parent.resolve()
 COUNT_KINDS = ["exact arb int", "exact arb frac", "exact quadruple float", "approx arb int"]
 FLOAT_KIND = "exact quadruple float"
 FLOAT_RTOL = 1e-6

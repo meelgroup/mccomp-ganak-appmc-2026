@@ -1,3 +1,4 @@
 public-results/track*
-/public-results2/track*
+public-results2/track*
+private-results*/track*
 *.png

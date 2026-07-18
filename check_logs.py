@@ -25,7 +25,7 @@ Three independent passes:
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).parent.resolve()
 WALL_LIMIT_S = 3600.0          # runsolver -W 3600
 MEM_LIMIT_MIB = 30000          # runsolver --rss-swap-limit 30000  (~30 GB)
 EARLY_MARGIN_S = 10.0          # "well before" the limit = finished >10 s early
