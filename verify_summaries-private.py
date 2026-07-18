@@ -214,12 +214,13 @@ def verify_track(track: int, suite: str) -> dict:
     # `disagreed` flags an instance where the participating counters did not all
     # agree.  That is only alarming for us if OUR answer was the odd one out,
     # i.e. the instance was solved but not scored correct (corr != 1.0).
+    # Instances we did not solve are listed too, but say nothing about us.
     disagreed, disagreed_bad = [], []
     for r in five_rows:
-        if r.get("disagreed") != "True":
+        if r.get("disagreed") != "True" or r["instance"] not in solved:
             continue
         disagreed.append(r["instance"])
-        if r["instance"] in solved and (r.get("corr") or "") not in ("1.0", "1"):
+        if (r.get("corr") or "") not in ("1.0", "1"):
             disagreed_bad.append(f"{r['instance']} corr={r.get('corr')!r} "
                                  f"votes={r.get('vote_count')} ({r.get('voters')})")
     if disagreed_bad:
@@ -296,9 +297,9 @@ def print_details(results):
                 print(line)
         elif r["disagreed"]:
             short = [i.replace(".cnf", "") for i in r["disagreed"]]
-            print(f"  NOTE - {len(short)} instance(s) flagged `disagreed` in 5-correct.csv (the")
-            print(f"    participating counters did not all agree). Ours matched the accepted")
-            print(f"    count on every one of them, so scoring is unaffected:")
+            print(f"  NOTE - {len(short)} instance(s) we solved are flagged `disagreed` in")
+            print(f"    5-correct.csv (the participating counters did not all agree). Ours matched")
+            print(f"    the accepted count on every one of them, so scoring is unaffected:")
             for line in wrap(short):
                 print(line)
 
