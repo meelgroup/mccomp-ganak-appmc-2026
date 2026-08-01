@@ -56,6 +56,8 @@ using infinite precision integers (MPZ). The "approx" uses the same MPZ type as 
 | approx (PAC+MPZ) | 75 / 100 | 68 / 100 | 143 / 200 |
 
 <img src="cdf_plots-all/cdf_track1.png" alt="Track 1 CDF" width="600">
+The big jump of the orange line at ~1600s is due to
+[ApproxMC](https://github.com/meelgroup/approxmc/) kicking in.
 
 ### Track 2 -- Weighted Model Counting (wmc)
 
@@ -82,6 +84,8 @@ using infinite precision integers (MPZ). The "approx" uses the same MPZ type as 
 | approx (PAC+MPZ)| 84 / 100 | 83 / 100 | 167 / 200 |
 
 <img src="cdf_plots-all/cdf_track3.png" alt="Track 3 CDF" width="600">
+The big jump of the orange line at ~1600s is due to
+[ApproxMC](https://github.com/meelgroup/approxmc/) kicking in.
 
 ### Track 4 -- Projected Weighted Model Counting (pwmc)
 
