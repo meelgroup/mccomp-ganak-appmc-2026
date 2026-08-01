@@ -118,7 +118,7 @@ def plot_track(track: int) -> None:
                 markersize=3, linewidth=1.3)
 
     ax.set_xscale("log")                            # log time, linear count
-    ax.set_xlim(0.1, WALL_LIMIT_S)
+    ax.set_xlim(1.0, WALL_LIMIT_S)
     ax.set_ylim(bottom=0)
     ax.set_xlabel("Solve time (s)  [log scale]")
     ax.set_ylabel("Instances solved")
