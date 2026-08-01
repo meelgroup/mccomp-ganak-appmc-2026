@@ -38,8 +38,7 @@ In other words, **zero cannot be guaranteed**: an instance whose true weighted c
 is exactly 0 can be reported as a small NON-ZERO value. Only the MPQ ("exact")
 runs give an answer you can trust for such cases.
 
-<details>
-<summary><b>Track 1 -- Model Counting (mc)</b></summary>
+### Track 1 -- Model Counting (mc)
 
 Here "approx" is **PAC**: a probabilistically approximate count, within a
 multiplicative epsilon with probability 1-delta. "exact" is the exact model count.
@@ -51,10 +50,7 @@ multiplicative epsilon with probability 1-delta. "exact" is the exact model coun
 
 ![Track 1 CDF](cdf_plots-all/cdf_track1.png)
 
-</details>
-
-<details>
-<summary><b>Track 2 -- Weighted Model Counting (wmc)</b></summary>
+### Track 2 -- Weighted Model Counting (wmc)
 
 Here "approx" does **not** mean PAC. It means high precision floating point
 (MPFR), while "exact" means infinite precision rationals (MPQ). The MPFR error is
@@ -68,10 +64,7 @@ reported as non-zero.
 
 ![Track 2 CDF](cdf_plots-all/cdf_track2.png)
 
-</details>
-
-<details>
-<summary><b>Track 3 -- Projected Model Counting (pmc)</b></summary>
+### Track 3 -- Projected Model Counting (pmc)
 
 Here "approx" is **PAC**: a probabilistically approximate count, within a
 multiplicative epsilon with probability 1-delta. "exact" is the exact model count.
@@ -83,10 +76,7 @@ multiplicative epsilon with probability 1-delta. "exact" is the exact model coun
 
 ![Track 3 CDF](cdf_plots-all/cdf_track3.png)
 
-</details>
-
-<details>
-<summary><b>Track 4 -- Projected Weighted Model Counting (pwmc)</b></summary>
+### Track 4 -- Projected Weighted Model Counting (pwmc)
 
 Here "approx" does **not** mean PAC. It means high precision floating point
 (MPFR), while "exact" means infinite precision rationals (MPQ). The MPFR error is
@@ -100,10 +90,7 @@ reported as non-zero.
 
 ![Track 4 CDF](cdf_plots-all/cdf_track4.png)
 
-</details>
-
-<details>
-<summary><b>Track 5 -- Complex-Weighted Model Counting (amc-complex)</b></summary>
+### Track 5 -- Complex-Weighted Model Counting (amc-complex)
 
 Public instances only, no private set. Here "approx" does **not** mean PAC. It
 means high precision floating point (MPFR), while "exact" means infinite precision
@@ -118,4 +105,3 @@ lot here, since complex-weighted counts cancel to exactly zero often.
 
 ![Track 5 CDF](cdf_plots-all/cdf_track5.png)
 
-</details>
