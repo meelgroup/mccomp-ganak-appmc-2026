@@ -1,1 +1,1 @@
-../create_cdf-private.py
+../scripts/create_cdf-private.py

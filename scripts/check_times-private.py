@@ -30,7 +30,7 @@ import re
 import sys
 from pathlib import Path
 
-DEFAULT_ROOT = Path(__file__).parent.resolve() / "private-results"
+DEFAULT_ROOT = Path(__file__).parent.resolve()
 
 CPU_LIMIT_S = 3600.0    # runsolver -C 3600 (the binding limit on this cluster)
 WALL_LIMIT_S = 3700.0   # runsolver -W 3700

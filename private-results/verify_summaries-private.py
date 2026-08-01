@@ -1,1 +1,1 @@
-../verify_summaries-private.py
+../scripts/verify_summaries-private.py

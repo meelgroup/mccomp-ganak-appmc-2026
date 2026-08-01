@@ -1,1 +1,1 @@
-../check_logs-private.py
+../scripts/check_logs-private.py
