@@ -1,0 +1,1 @@
+../scripts/check_logs-private.py
