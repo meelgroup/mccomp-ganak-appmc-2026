@@ -46,7 +46,7 @@ multiplicative epsilon with probability 1-delta. "exact" is the exact model coun
 | Configuration | Public | Private | Total |
 |---|---|---|---|
 | exact  | 71 / 100 | 62 / 100 | 133 / 200 |
-| approx | 75 / 100 | 68 / 100 | 143 / 200 |
+| approx (PAC) | 75 / 100 | 68 / 100 | 143 / 200 |
 
 <img src="cdf_plots-all/cdf_track1.png" alt="Track 1 CDF" width="600">
 
@@ -60,7 +60,7 @@ reported as non-zero.
 | Configuration | Public | Private | Total |
 |---|---|---|---|
 | exact  | 61 / 100 | 59 / 100 | 120 / 200 |
-| approx | 61 / 100 | 60 / 100 | 121 / 200 |
+| approx (MPFR)| 61 / 100 | 60 / 100 | 121 / 200 |
 
 <img src="cdf_plots-all/cdf_track2.png" alt="Track 2 CDF" width="600">
 
@@ -72,7 +72,7 @@ multiplicative epsilon with probability 1-delta. "exact" is the exact model coun
 | Configuration | Public | Private | Total |
 |---|---|---|---|
 | exact  | 64 / 100 | 61 / 100 | 125 / 200 |
-| approx | 84 / 100 | 83 / 100 | 167 / 200 |
+| approx (PAC)| 84 / 100 | 83 / 100 | 167 / 200 |
 
 <img src="cdf_plots-all/cdf_track3.png" alt="Track 3 CDF" width="600">
 
@@ -86,7 +86,7 @@ reported as non-zero.
 | Configuration | Public | Private | Total |
 |---|---|---|---|
 | exact  | 66 / 100 | 69 / 100 | 135 / 200 |
-| approx | 78 / 100 | 84 / 100 | 162 / 200 |
+| approx (MPFR)| 78 / 100 | 84 / 100 | 162 / 200 |
 
 <img src="cdf_plots-all/cdf_track4.png" alt="Track 4 CDF" width="600">
 
