@@ -2,3 +2,4 @@ public-results/track*
 public-results2/track*
 private-results*/track*
 */__pycache__
+/public-instances
