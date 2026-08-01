@@ -48,7 +48,7 @@ multiplicative epsilon with probability 1-delta. "exact" is the exact model coun
 | exact  | 71 / 100 | 62 / 100 | 133 / 200 |
 | approx | 75 / 100 | 68 / 100 | 143 / 200 |
 
-![Track 1 CDF](cdf_plots-all/cdf_track1.png)
+<img src="cdf_plots-all/cdf_track1.png" alt="Track 1 CDF" width="600">
 
 ### Track 2 -- Weighted Model Counting (wmc)
 
@@ -62,7 +62,7 @@ reported as non-zero.
 | exact  | 61 / 100 | 59 / 100 | 120 / 200 |
 | approx | 61 / 100 | 60 / 100 | 121 / 200 |
 
-![Track 2 CDF](cdf_plots-all/cdf_track2.png)
+<img src="cdf_plots-all/cdf_track2.png" alt="Track 2 CDF" width="600">
 
 ### Track 3 -- Projected Model Counting (pmc)
 
@@ -74,7 +74,7 @@ multiplicative epsilon with probability 1-delta. "exact" is the exact model coun
 | exact  | 64 / 100 | 61 / 100 | 125 / 200 |
 | approx | 84 / 100 | 83 / 100 | 167 / 200 |
 
-![Track 3 CDF](cdf_plots-all/cdf_track3.png)
+<img src="cdf_plots-all/cdf_track3.png" alt="Track 3 CDF" width="600">
 
 ### Track 4 -- Projected Weighted Model Counting (pwmc)
 
@@ -88,7 +88,7 @@ reported as non-zero.
 | exact  | 66 / 100 | 69 / 100 | 135 / 200 |
 | approx | 78 / 100 | 84 / 100 | 162 / 200 |
 
-![Track 4 CDF](cdf_plots-all/cdf_track4.png)
+<img src="cdf_plots-all/cdf_track4.png" alt="Track 4 CDF" width="600">
 
 ### Track 5 -- Complex-Weighted Model Counting (amc-complex)
 
@@ -103,5 +103,5 @@ lot here, since complex-weighted counts cancel to exactly zero often.
 | exact  | 49 / 100 | n/a | 49 / 100 |
 | approx | 53 / 100 | n/a | 53 / 100 |
 
-![Track 5 CDF](cdf_plots-all/cdf_track5.png)
+<img src="cdf_plots-all/cdf_track5.png" alt="Track 5 CDF" width="600">
 
