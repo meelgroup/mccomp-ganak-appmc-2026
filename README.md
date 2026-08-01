@@ -87,15 +87,20 @@ using infinite precision integers (MPZ). The "approx" uses the same MPZ type as 
 The big jump of the orange line at ~1600s is due to
 [ApproxMC](https://github.com/meelgroup/approxmc/) kicking in.
 
-<!-- ### Track 4 -- Projected Weighted Model Counting (pwmc) -->
+### Track 4 -- Projected Weighted Model Counting (pwmc)
+Currently a mess because Ganak trusted the header,
+which usually is PWMC for this track, but in some cases, it
+was PMC, which lead to Ganak solving some instances using the PAC
+method, and some instances using the MPFR method. So only
+the "exact" results are reported here.
 
 <!-- Here "approx" does **not** mean PAC. It means high precision floating point -->
 <!-- (MPFR), while "exact" means infinite precision rationals (MPQ). The MPFR error -->
 <!-- can be "infinite" in that we can report non-zero value for zero. -->
 
-<!-- | Configuration | Public | Private | Total | -->
-<!-- |---|---|---|---| -->
-<!-- | exact  (MPQ)| 66 / 100 | 69 / 100 | 135 / 200 | -->
+| Configuration | Public | Private | Total |
+|---|---|---|---|
+| exact  (MPQ)| 66 / 100 | 69 / 100 | 135 / 200 |
 <!-- | approx (MPFR)| 78 / 100 | 84 / 100 | 162 / 200 | -->
 
 <!-- <img src="cdf_plots-all/cdf_track4.png" alt="Track 4 CDF" width="600"> -->
